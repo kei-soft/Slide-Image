@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace SlideImage
 {
@@ -14,6 +16,8 @@ namespace SlideImage
         public MainPage()
         {
             InitializeComponent();
+
+            On<iOS>().SetUseSafeArea(true);
 
             List<dynamic> dynamics = new List<dynamic>();
             
